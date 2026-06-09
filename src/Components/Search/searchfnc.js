@@ -25,7 +25,11 @@ const filteredItem=techs.filter(tech=>tech.toLowerCase().includes(val.toLowerCas
     <div style={{marginLeft:"20vw",fontSize:"3vw",display:"flex",justifyContent:"center",width:"35vw"}}>
         <ul style={{listStyle:"none"}}>
           {filteredItem.length===0?<li>NO RESULT FOUND</li>:filteredItem.map((item,key)=>{
-            return  <li key={key} style={{border:"solid red 1px"}}>{item}</li> 
+            const itemLabel = typeof item === 'object' && item !== null
+              ? item.question ?? item.answer ?? JSON.stringify(item)
+              : item;
+
+            return  <li key={key} style={{border:"solid red 1px"}}>{itemLabel}</li> 
           })}
         </ul>
     </div>

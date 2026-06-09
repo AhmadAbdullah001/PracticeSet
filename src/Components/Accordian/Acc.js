@@ -22,13 +22,22 @@ function Acc() {
     else
         setopenindex(index)
   }
-  
   return (
     <>
-      <div style={{border:"solid red 1px",height:"70vh"}}>
-        {faqData.map((item,index)=>{
-            return <div key={index} style={{border:"solid red 1px"}}>{item}</div>
-        })}
+      <div style={{border:"solid red 1px",height:"70vh",display:"flex",alignItems:'center',flexDirection:"column"}}>
+        <h1>FAQ</h1>
+            <div style={{display:"flex",width:"50vw",flexDirection:"column",justifyContent:"space-between"}}>
+              {faqData.map((item,index)=>{
+          return (
+          <>
+          <div onClick={()=>{handleclick(index)}} style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <p style={{marginLeft:"10px",fontWeight:openindex===index?'bold':'lighter'}}>{index+1}) {item.question}</p>
+              <button style={{height:"max-content"}}>{openindex===index?"close":"open"}</button>
+              </div>
+              <p style={{marginLeft:"30px",display:openindex===index?"block":"none"}}>{item.answer}</p>
+            </>)
+            })}
+            </div>
       </div>
     </>
   )
