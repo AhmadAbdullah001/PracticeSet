@@ -1,9 +1,9 @@
 import React from 'react'
-import Star from './Components/Star Rating/Star'
+import Todo from './Components/TODO/Todo'
 function App() {
   return (
     <div>
-       <Star></Star>
+       <Todo></Todo>
     </div>
   )
 }
