@@ -1,9 +1,9 @@
 import React from 'react'
-import Toast from './Components/Toast/Toast'
+import Star from './Components/Star Rating/Star'
 function App() {
   return (
     <div>
-       <Toast></Toast>
+       <Star></Star>
     </div>
   )
 }
