@@ -1,9 +1,9 @@
-import Acc from './Components/Accordian/Acc'
 import React from 'react'
+import Toast from './Components/Toast/Toast'
 function App() {
   return (
     <div>
-        <Acc></Acc>
+       <Toast></Toast>
     </div>
   )
 }

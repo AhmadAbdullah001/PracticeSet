@@ -1,0 +1,18 @@
+.progress
+{
+    height:5px;
+    background-color: green;
+    width: 80%;
+    margin-left: 30px;
+    animation: shrink 3s forwards linear;
+}
+@keyframes shrink {
+    from
+    {
+        width: 80%;
+    }
+    to
+    {
+        width: 0%;
+    }
+}
